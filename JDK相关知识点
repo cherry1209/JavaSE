@@ -1,0 +1,23 @@
+1.什么是JDK：Java开发工具包，做java开发必须安装的一个工作包，
+在http://www.oracle.com下载
+
+2.JavaSE（java标准版）
+  JavaEE（java企业版）
+  JavaME（java微型版）
+其实javaSE是最基本的
+
+3.java虚拟机（JVM），保证了可移植型
+
+4.Java运行的关键阶段：
+   *编译阶段：检查java源程序是否符合JAVA语法
+     程序员需在硬盘的某个位置新建一个.java拓展名的源文件
+     Java程序员需使用JDK当中自带的javac.exe命令进行JAVA程序编译。
+     Javac怎么用，在哪里用？（javac是一个java编译器工具/命令）
+     --在DOS命令窗口中使用
+     --Javac的使用规则：javac java源文件的路径
+     --编译可能生成多个.class文件（class文件可以拷贝到其他操作系统中运行）
+     
+    *运行阶段：
+    --JDK安装之后，除了自带一个javac.exe之外，还有另一个工具/命令，叫做java.exe（主要负责运行阶段）
+    --java.exe在哪里用，怎么用：在DOS窗口中使用；java 类名
+      例：java hello（java hello.class写法是错误的）
