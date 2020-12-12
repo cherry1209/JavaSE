@@ -1,0 +1,32 @@
+/*
+   1.关于字面值：
+     *字面值：
+	    --10、100
+		--3.14         属于浮点型字符型
+		--“abc”        属于字符串型字面值
+		--'a'          属于字符型字面值
+		--true、false  属于布尔型字面值
+	  *字面值就是数据
+	  *字面值是java源程序的组成部分之一，包括标识符和关键字他们都是java源程序的组成部分
+	  *数据在现实世界当中是分门别类的，所以数据在计算机编程语言当中也是有类型的：【数据类型】
+	    --10、100    属于整数型字面值
+		--“abc”      属于字符串字面值
+		
+	2.错误：ConstTest.java:20: 错误: 编码GBK的不可映射字符
+            System.out.println("鎴戞槸浣犵埜鐖?");
+	  解决方法：编译时指定编码方式就可以了，如：javac -encoding UTF-8 ConstTest.java
+
+	
+*/
+public class ConstTest
+{
+   public static void main(String[] args){
+      System.out.println("abc");
+	  System.out.println(100);
+	  //100是一个字面值，是一个整数型数值，那么既然是数据存储在内存当中，必定会占用一定的内存空间
+	  System.out.println("我是你爸爸");
+	  System.out.println(false);
+   
+   
+   }
+}
