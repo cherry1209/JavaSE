@@ -1,0 +1,29 @@
+/*
+    关于java语言当中的变量：
+       
+       1.在方法体当中的java代码，是遵守自上而下的顺序依次执行的，逐行执行：
+          第一行；
+          第二行；
+          第三行；
+          特点是：第二行的代码执行结束之后才会执行第三行
+       
+      2.在同一个作用域当中，变量名不能重名，但是变量可以重新赋值
+*/
+
+代码部分：
+public class Vartest02
+{
+	public static void main(String[] args)
+	{
+		int i = 100;
+		
+		System.out.println(i);
+		
+		i = 200;
+		
+		//int i = 90;  //会报错
+		
+		System.out.println(i);
+		
+	}
+}
