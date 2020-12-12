@@ -1,0 +1,37 @@
+注释方法：
+1.单行注释：//单行注释，只注释当前行
+2.多行注释：
+/*
+ 多行注释
+ ..........
+*/
+3.javadoc注释：
+  /**
+   *javadoc注释
+   *javadoc注释
+  */
+注意：这种注释是比较专业的注释，该注释信息会被javadoc.exe工具解析提取并帮助生成文档
+
+
+代码部分：
+  //public表示公开的
+  //class表示定义了一个类
+  //helloWorld表示一个类名
+public class helloWorld{//表示定义了一个公开的类，起名helloworld
+  //类体
+  //类体中不予许直接编写java语句【处声明变量之外】
+  //System.out.println("Hello World!");（此语句写在这会出错）
+  /*
+    (String[] args)是一个main方法的形式参数列表
+    main 表示方法名是main
+    须记住：一下是一个程序的“主方法”，是程序的执行入口（这是规定格式）
+  */
+	public static void main(String[] args){//表示定义了一个公开的静态的主方法
+	 //方法体
+	
+	 //java语句以【“；”】终止
+	 //先记住：以下这样代码的作用是向控制台输出一段字符串
+		System.out.println("Hello World!");
+		System.out.println("我是你大爷");
+	}
+}
