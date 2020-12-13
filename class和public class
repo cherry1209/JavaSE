@@ -28,8 +28,6 @@ public class hello
 	 public static void main(String[] args){
 	  System.out.println("hello  hello ");
   }
-}
-
 /*
    *每一个class当中都可以编写main方法，都可以设定程序的入口，向执行b.class中的main方法：java b，想执行x.class当中的main方法：java x
    *注意：当在命令窗口中执行java hello，那么要求hello.class当中必须有主方法，没有主方法会出现运行阶段的错误：
