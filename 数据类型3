@@ -1,0 +1,108 @@
+/*
+      关于java语言当中的char类型：
+          转义字符 \
+        
+      转义字符出现在特殊字符之前，会将特殊字符转换成普通字符
+    
+      \n      换行符
+      \t      制表符
+      \'      普通的单引号
+      \\      普通的反斜杠
+      \"      普通的双引号
+        
+
+*/
+public class DataTypeTest03
+{
+	   public static void main(String[] args)
+	   {
+	   	   //普通的n字符
+	   	   char cl = 'a';
+	   	   System.out.println(cl);
+	   	   
+	   	   //依照目前所学知识，以下程序无法编译通过，因为显然是一个字符串，不能使用单引号括起来
+	   	   //但是经过编译，发现编译通过了，这说明以下并不是一个字符串，而是一个字符
+	   	   //这是一个“换行符”，属于char类型的数据
+	   	   //反斜杠在java语言当中具有转义功能
+	   	   char c2 = '\n';
+	   	   
+	   	   System.out.println("hello");
+	   	   System.out.println("World!");
+	   	   
+	   	   //System.out.println()和System.out.print()区别：println输出之后换行，print表示输出，但不换行
+	   	   
+	   	   System.out.print("hello");
+	   	   System.out.println("World!");
+	   	   
+	   	   System.out.print("A");
+	   	   System.out.print(c2);
+	   	   System.out.println("B");
+	   	   
+	   	   //普通的t字符
+	   	   char x = 't';
+	   	   System.out.println(x);
+	   	   
+	   	   //制表符tab【注：制表符和空格不一样,他们ASCII码不同】
+	   	   char y = '\t';
+	   	   System.out.print("A");
+	   	   System.out.print(y);
+	   	   System.out.println("B");
+	   	   
+	   	   //要求在控制台上输出“反斜杠字符”
+	   	   //反斜杠将后面的单引号转义成不具备特殊含义的普通单引号字符，
+	   	   //左边的单引号缺少了结束的单引号字符，编译错误
+	   	   /*
+	   	   char k = '\';
+	   	   System.out.println(k);
+	   	   */
+	   	   
+	   	   /*
+	   	     \\
+	   	     解释：第一个反斜杠具有转义功能，将后面的反斜杠转义为普通的反斜杠字符
+	   	     结论：在java当中两个反斜杠代表一个普通的反斜杠字符
+	   	   */
+	   	   char k = '\\';
+	   	   System.out.println(k);
+	   	   
+	   	   //在控制台上输出一个普通的单引号字符
+	   	   //java中不允许这样的编写程序，编译报错
+	   	   //char a = '';
+	   	   
+	   	   //以下编译报错：第一个单引号和第二个单引号配对，最后的单引号找不到另一半
+	   	   //char a = ''';
+	   	   //System.out.println(a);
+	   	   
+	   	   //反斜杠具有转义功能，将第二个单引号转换成普通的单引号字符
+	   	   //第一个单引号和最后单引号配对
+	   	   char a = '\'';
+	   	   System.out.println(a);
+	   	   
+	   	   char f = '"';
+	   	   System.out.println(f);
+	   	   
+	   	   System.out.println("hello");
+	   	   System.out.println("“hello”");
+	   	   // System.out.println(""hello"");//报错
+	   	   System.out.println("\"hello\"");//纠正后
+	   	   
+	   	   char m = '中';
+	   	   System.out.println(m);
+	   	   
+	   	   //JDK中自带的native2ascii.exe命令，可以将文字转换成unicode编码形式
+	   	   //怎么使用这个命令：
+	   	   //在命令行输入native2ascaii，回车，然后输入文字之后回车即可得出unicode编码
+	   	   char n = '\u4e2d';//“中”对应的unicode编码是 4e2d
+	   	   //反斜杠u表示4e2d是一个unicode编码
+	   	   System.out.println(n);
+	   	   
+	   	   
+	   	   //char 类型的默认值
+	   	   char c = '\u0000';
+	   	   System.out.println(c);
+	   	    
+	   	   char j = '中';
+	   	   System.out.println(j);
+	   	   
+	   }
+	
+}
