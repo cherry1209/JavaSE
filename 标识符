@@ -34,8 +34,6 @@
 	   
 */
 
-
-代码部分：
 public class Indentifier//indentifier是一个类名，名字可以修改
 {
 	//main 是一个方法名
