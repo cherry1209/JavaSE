@@ -9,7 +9,6 @@
           出了大括号就不认识了。
 */
 
-代码部分：
 public class VarTest03
 {
 	 //注意：这里的static不要去掉
