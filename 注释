@@ -29,7 +29,7 @@ public class helloWorld{//表示定义了一个公开的类，起名helloworld
   /*
     (String[] args)是一个main方法的形式参数列表
     main 表示方法名是main
-    须记住：一下是一个程序的“主方法”，是程序的执行入口（这是规定格式）
+    须记住：以下是一个程序的“主方法”，是程序的执行入口（这是规定格式）
   */
 	public static void main(String[] args){//表示定义了一个公开的静态的主方法
 	 //方法体
