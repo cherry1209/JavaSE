@@ -18,8 +18,8 @@ public class OperatorTest01
 		//规则：先进行自加1运算，然后再进行赋值操作
 		int m = 20;
 		int n = m++;
-		System.out.println(b);// 21
-		System.out.println(a);// 21
+		System.out.println(m);// 21
+		System.out.println(n);// 21
 		
 	
 		int x = 100;
