@@ -1,0 +1,52 @@
+/*
+      关于逻辑运算符：
+         &     逻辑与
+         |     逻辑或
+         ！    逻辑非
+         ^     逻辑异或（同零异一）
+         
+         &&    短路与
+         ||    短路或
+   
+*/
+public class OperatorTest02
+{
+	public static void main(String[] args)
+	{
+		 //逻辑与或非
+		 System.out.println( 5 < 7 & 5 < 6);//true
+		 System.out.println( 5 < 7 | 5 < 3);//true
+		 System.out.println( 5 < 7 ^ 5 < 6);//false
+		 
+		 /*
+		 //逻辑与和短路与
+		 int x = 10;
+		 int y = 8;
+		 //逻辑与
+		 System.out.println(x < y & ++x < y);
+		 System.out.println(x);//11
+		 */
+		 
+		 //逻辑与和短路与
+		 int x = 10;
+		 int y = 8;
+		 //短路与
+		 //x < y结果是false，整个表达式结果已经确定是false
+		 //所有后面的表达式没有在执行，这种现象被称为短路现象
+		 //短路与才会出现短路现象，逻辑与是不会出现短路现象的
+		 System.out.println(x < y && ++x < y);
+		 System.out.println(x);//10
+		 
+		 /*
+		     从某种角度来看，短路与更机智。由于后面的表达式可能不执行，
+		     所以执行效率较高。这种方式在实际的开发中使用较多，短路与比
+		     逻辑与使用的多，短路与更常用。
+		     
+		     但是在某些特殊的业务逻辑中，要求运算符两边的算子必须全部执行，
+		     此时必须使用逻辑与，不能使用短路与，使用短路与可能导致右边的
+		     表达式不执行。
+		 
+		 */
+	 
+	}
+}
