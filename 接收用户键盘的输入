@@ -1,0 +1,61 @@
+/*
+       1、需求：
+         假设系统给定一个考生的成绩，成绩可能带有小数点，成绩范围是【0-100】
+         根据学生的成绩判断该成绩等级：
+                【90-100】  优秀
+                【70-80】   较好
+                【60-70】   较差
+                【0-60】    不及格
+         以上逻辑判断采用if语句完成，应该怎么写
+         
+         2、控制语句
+         
+            *选择结构
+              -if，if……flse
+              -switch
+              
+            *循环结构
+              -for
+              -while
+              -do..whhile();
+            
+            *控制循环的语句
+              -break
+              -continue
+         
+       3、接收用户键盘的输入：
+       
+        第一步：创建键盘扫描器的对象
+                java.util.Scanner s = new java.Util.Scanner(System.in);
+       
+        第二步：调用Scanner对象next()方法开始接收用户键盘输入
+                String str = s.next();
+                或
+                int num = s.nextInt();
+          
+*/
+public class IfElse02
+{
+	public static void main(String[] args)
+	{
+		   java.util.Scanner s = new java.util.Scanner(System.in);
+		   System.out.print("请输入你的成绩");
+		   int score = s.nextInt();
+		   System.out.println("你的成绩是：" + score);  
+		   
+       String str = "不及格";
+       
+		   if(score > 100 || score < 0){
+		   	  str ="成绩小于0或大于100，请重新输入";
+		   }else if(score >= 90){
+		   	  str ="成绩优秀";
+		   }else if(score >= 70){
+		   	  str ="成绩较好";
+		   }else if(score >= 60){
+		   	  str ="成绩较差";
+		   }
+		   
+		   System.out.println(str);
+   
+	}
+}
