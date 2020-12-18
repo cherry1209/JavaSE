@@ -1,0 +1,39 @@
+public class compute
+{
+	public static void main(String[] args){
+		java.util.Scanner s = new java.util.Scanner(System.in);
+		System.out.println("请输入数字：");
+		int num1 = s.nextInt();
+		
+		java.util.Scanner m = new java.util.Scanner(System.in);
+		System.out.println("请输入符号：");
+		String option = m.next();
+		
+		java.util.Scanner n = new java.util.Scanner(System.in);
+		System.out.println("请输入数字：");
+		int num2 = n.nextInt();
+		
+		int sum = 0;
+		int count =1;
+		switch(option){
+			case "+":
+			  sum = num1 + num2;
+			  break;
+			case "-":
+			  sum = num1 - num2;
+			  break;
+			case "*":
+			  sum = num1 * num2;
+			  break;
+			case "/":
+			  sum = num1 / num2;
+			  break;
+			default:
+			  count = 0;
+			  System.out.println("你输入的字符非法");
+		}
+		if(count != 0){
+		System.out.println("结果是：" + num1 + option + num2 + "=" + sum);
+	 }
+	}
+}
