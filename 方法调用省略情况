@@ -1,0 +1,46 @@
+/*
+   方法调用:
+      1.方法的修饰符列表当中有static关键字，完整的调用方式是：类名.方法名（实参列表）;
+      
+      2.但是，有的时候“类名.”可以省略，什么情况下可以省略呢？
+      m1(){
+        m2();
+      }
+      m1方法和m2方法在同一个类名当中的时候，“类名.”可以省略不写
+      
+*/
+public class Method04
+{
+	public static void main(String[] args){
+		//调用方法
+		Method04.m1();
+		
+		//对于方法的修饰符列表当中有static关键字：“类名.”可以省略不写吗
+		//省略的方式
+		m1();
+		
+		//完整的方式
+		Method04.m1();
+		
+		//调用其他类【不是本类中的】中的方法
+		A.doOther();
+	
+	  //省略"类名."试试
+	  //编译报错："类名."省略之后，默认从当前类中找"doOther"方法，在当前类中该方法不存在
+	  //doOther();
+	}
+	public static void m1(){
+		System.out.println("m1 method execute!");
+	}
+	
+	public static void m2(){
+		System.out.println("m2  method execute!");
+	}
+}
+
+class A
+{
+	public static void doOther(){
+	System.out.println("m method execute!");
+}
+}
