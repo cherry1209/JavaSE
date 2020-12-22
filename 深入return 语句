@@ -1,0 +1,66 @@
+/*
+   深入return 语句
+   
+       *带有return关键字的java语句只要执行，所在的方法执行结束
+       
+       *在“同一个作用域”当中，return语句下面不能编写任何代码，因
+         为这些代码永远都执行不到，所以编译报错
+*/
+public class Method06{
+	public static void main(String[] args){
+		System.out.println(m());
+	}
+	
+	
+	//编译报错：缺少返回语句，以下程序编译器认为无法百分之百的执行“return 0;”
+	/*
+	public static int m(){
+		int a = 10;
+		if(a > 3){
+			return 0;
+		}
+		*/
+		
+		//以下程序可以保证“return 1;”或“return 0;”会执行，编译通过
+	  /*
+		public static int m(){
+		int a = 10;
+		if(a > 3){
+			return 0;
+		}
+		else{
+			return 1;
+		}
+	}
+		*/
+		
+		//可以，效果同上
+		/*
+		public static int m(){
+		int a = 10;
+		if(a > 3){
+			return 0;
+		}
+			return 1;
+	}
+		*/
+		
+		/*
+	public static int m(){
+		int a = 10;
+		if(a > 3){
+			return 0;
+			//这里不能编写代码，编译错误，因为无法访问的语句
+			//System.out.println("hello");
+		}
+		  //这里的代码可以执行到
+			System.out.println("hello");
+			return 1;
+		}
+		*/
+		
+		public static int m(){
+		return 10 > 3 ? 1 : 0;
+		
+	}
+}
