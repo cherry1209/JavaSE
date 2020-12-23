@@ -1,0 +1,58 @@
+/*
+   不使用递归，计算1~N的和
+*/
+public class Recursion02{
+	public static void main(String[] args){
+		
+		java.util.Scanner s = new java.util.Scanner(System.in);
+		System.out.println("请输入n的值：");
+		int n = s.nextInt();
+		
+    //法一：
+		int sum = 0;
+		for(int i = 0;i <= n;i++)
+		{
+			 System.out.print(i + "+");
+			 sum = i + sum;
+		}
+		System.out.println("=" + sum);
+			
+		sumInt(n);
+		System.out.println("hello");
+		System.out.println(sum(n));
+	}
+  
+  //法二（方法）：
+	//单独的定义一个方法，这是一个独立的功能，可以完成1~N的和
+	public static void sumInt(int n){
+	 int sum = 0;
+	 int count = 1;
+	 int i;
+		for(i = 0;i <= n;i++)
+		{
+			 sum = i + sum;
+			 if(count == 8)
+			 {
+			     System.out.println(i + "+");
+			     count = 1;
+		  	}else{
+		  		 System.out.print(i + "+");
+		  		 ++count;
+		  	}
+		}
+		System.out.println(i + "=" + sum);
+		return;
+	}
+	
+//法三（递归）：	
+	public static int sum(int n){
+		if(n ==1){
+			System.out.print("1"+ "=");
+			return 1;
+		}
+		else{
+			System.out.print(n + "+");
+			return n + sum(n-1);
+		}
+	}
+}
