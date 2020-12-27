@@ -1,0 +1,37 @@
+//测试类
+//引用是一个变量：变量包括：局部变量和成员变量
+public class OoTest02{
+	public static void main(String[] args){
+		//创建对象
+		//u是局部变量
+		//u是一个引用
+		//u保存内存地址指向堆内存的User对象
+		User u = new User();
+		
+		//输出User对象内部实例变量的值
+		System.out.println(u.no);//0
+		System.out.println(u.name);//null
+		System.out.println(u.addr);//null
+		
+		System.out.println();
+		
+		//修改User对象内部实例变量的值
+		u.no = 123;
+		u.name = "张三";
+		
+		//注意：一定记得new一下address
+		u.addr = new Address();
+		u.addr.city = "安徽省";
+		u.addr.street = "中华路";
+		u.addr.zipcode = "4567";
+		
+		
+		//输出User对象内部实例变量的值
+		System.out.println(u.no);
+		System.out.println(u.name);
+		
+		System.out.println(u.name + "居住的城市：" + u.addr.city);
+		System.out.println(u.name + "居住的街道：" + u.addr.street);
+		System.out.println(u.name + "居住城市的邮编：" + u.addr.zipcode);
+	}
+}
