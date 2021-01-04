@@ -1,0 +1,18 @@
+package com.bjpowernode.javase.day09.test002;
+
+public class UserTest {
+
+	public static void main(String[] args) {
+		User user = new User();
+		//私有的属性不能再外部直接访问，这就是封装
+		//user.age = 100;
+		
+		//操作入口变成了只能通过set和get方法进行访问
+		//在set方法和get方法执行过程中可以进行安全过滤
+		user.setAge(100);
+		System.out.println(user.getAge());
+		
+		
+	}
+
+}
