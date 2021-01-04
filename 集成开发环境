@@ -1,0 +1,84 @@
+/*
+  1、关于java的集成开发环境：【集成开发环境简称：IDE】
+    *什么是集成开发环境：可以让软件开发变得更简单、更高效。
+    
+    *没有IDE工具：
+      -需要安装JDK、需要配置环境变量、需要手动的将java源文件编译成class字节码文件
+      -java源程序出错之后还没有提示
+      -没有自动提示功能等。
+      
+    *有IDE工具：
+      -不需要独立安装JDK【IDE中已经集成】
+      -不需要手动配置环境变量
+      -不需要使用javac命令对java源文件进行编译
+      -并且java源程序编写语法错误马上有提示
+      -使用IDE工具有很多代码不需要写，自动生成了。
+      
+    1.2java有哪些比较牛的IDE呢：
+      *eclipse
+      *myelipse
+      *Intellij IDEA
+      *NetBeans
+      ..........
+      
+   2、讲解myeclipse的使用：
+   
+   *workspace：工作区
+     -当myeclipse打开的时候，多数都是会提示选择工作区
+     -这个工作区可以是一存在的工作去，也可以是新建的工作区
+     -选择工作区之后，将来编写的java代码，自动编译的class文件夺回在工作区中找到
+     -myeclipde可以开启两个是指更多的会话，每一个会话对应不同的workspace
+     
+   *在workspace工作区当中有一个文件夹：.metadata
+   -在该文件夹当中存储了当前myeclipse的工作状态
+   -将/metadata文件夹删除之后，下一次再次进入这个工作区的时候，是一个全新的开始
+    但是会发现这个IDE工具当中所有的炫目丢失了，没关系，这里只是丢失的myeclipse的项目，
+    硬盘上真实存储的项目不会丢失
+   
+   
+   *打开myeclipse之后：窗口
+   -窗口双击可以最大化或者还原
+   -窗口可以拖动
+   -窗口不小心关闭了，可以再次打开；
+       window --> show view --> other-->输入自己要找的窗口
+       
+   *myeclipde 为程序员准备了很多不同的布局方式：
+     -企业级开发：javaEE开发的专用布局-MyEclipse Java Enterprise
+     -普通java开发的：JavaSE开发的专用布局-Java
+     -怎么切换布局？
+       *myeclipse右上角
+       
+   *当这个布局被破坏之后想复原？
+     -window -->Reset
+     
+   *重点的窗口介绍
+      *Package Explore/ Navegator/Project Explore:可以看到java源文件
+      *Console：控制台窗口
+      
+      *工作区workspace中基本的单元是：Project(工程/项目)
+      
+      *使用myeclipse:
+        -在package Explore窗口当中点击右键-->new -->Java Project【Javase工程】：当然还有其他的方式
+        *指定java工程的名臣：一般全部小写
+        *指定java工程的存放目录
+        *Java的运行时环境：JRE的配置【可以选择使用myeclipse自带的JRE，也可以选择程序员自己安装的JRE】
+         scr全称source
+        *
+      *在软件包下新建一个java类：
+      -在包上点击鼠标右键-->new-->class【同时生成main方法】
+      -显示行号：在java源程序的左侧栏上点击鼠标右键：show line number
+      -设置字体大小：
+        window --> Preference--> 输入font--> colors and fonts --> Basic --> Text Font -->Edit
+        
+      *关于myeclipse中常见的部分快捷键：
+      -ctrl + d   删除一行
+      -alt + /    自动补全
+      -ctrl + 1   纠错
+      
+      *快捷键怎么设置？
+      window --> Preferences --> keys
+      
+      *怎么运行一个带有主方法的java程序？
+        *在java源程序的任何位置点击鼠标右键 --> Run As --> Java Application
+      
+*/
