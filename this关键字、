@@ -70,7 +70,6 @@ public class CustomerTest01 {
 	  
 	  //调用doOther
 	  Customer.doOther();
-	  
   }
 }
 
