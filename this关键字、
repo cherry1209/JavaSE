@@ -4,6 +4,8 @@
  *     2、this是一个引用，this是一个变量，this变量中保存了内存地址指向自身，this存储在JVM堆内存java对象内部。
  *     3、创建100个java对象，每一个对象都有this，也就说有100个不同的this
  *     4、this可以出现在“实例方法”当中，this指向当前正在执行这个动作的对象。【this代表当前对象】
+ *     5、this在多数情况下是可以省略不写的
+ *     6、this不能使用在带有static的方法当中
  */
 public class Customer {
 	//姓名【堆内存的对象内部中存储，所以访问该数据的时候，必须先创建对象，通过引用方式访问】
@@ -13,7 +15,7 @@ public class Customer {
 	public Customer(){
 	
 	}	
-    //不带有static关键字的一个方法
+        //不带有static关键字的一个方法
 	//顾客购物最终的结果是不一样的
 	//所以购物这个行为是属于对象级别的行为
 	//由于每一个对象在执行购物这个动作的时候最终结果不同，所以购物这个动作必须有“对象”的参与。
@@ -31,15 +33,45 @@ public class Customer {
 		//完整写法
 		System.out.println(this.name + "在购物");
 		
+	}
+	//带有static
+	public static void doSome(){
+		//这个执行过程中没有“当前对象”，因为带有static的方法是通过类名的方式访问的
+		//或者说这个”上下文“当中没有“当前对象”，自然也不存在this（this代表的是当前正在执行的这个动作的对象）
 		
+		//以下程序为什么编译错误呢？
+		//doSome方法调用不是对象去调用，是一个类名去调用，执行过程中没有”当前对象“
+		//name是一个实例变量，以下代码的含义是：访问当前对象的name，没有当前对象，自然也不能访问当前对象的name
+		//System.out.println(name);
+		
+		//static的方法调用不需要对象，直接使用类名，所以执行过程中没有当前对象，所以不能使用this
+        //System.out.println(this.name);
+	}
+	public static void doOther(){
+		//假设想访问name这个实例变量的话应该怎么做？
+		//System.out.println(name);
+		
+		//可以采用以下方案，但是以下方案，决定以不是访问的当前对象的name
+		//创建对象
+		Customer c = new Customer();
+		System.out.println(c.name);//这里访问的name是c引用指向对象的name                                   
 	}
 }
 
-//另一个包中
 public class CustomerTest01 {
   public static void main(String[] args){
 	  Customer c1 = new Customer();
 	  c1.name = "zhangshan";
 	  c1.shopping();
+	  
+	  //调用doSome方法（修饰符列表上有static）
+	  //采用“类名.“的方式访问，显然这个方法在执行的时候不需要对象的参加。
+	  Customer.doSome();
+	  
+	  //调用doOther
+	  Customer.doOther();
+	  
   }
 }
+
+
