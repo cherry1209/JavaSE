@@ -1,0 +1,85 @@
+package com.bjpowernode.javase.ThisTest;
+/*判断是局部变量or实例变量/实例方法or构造方法
+
+ * 
+ */
+public class Test {
+    //主方法
+	public static void main(String[] args) {
+		//要求在这里编写程序调用method1
+		//使用完整的方式调用
+		Test.method1();
+		//使用省略的方式调用
+		method1();
+		
+		
+		//要求在这里编写程序调用method2
+		//使用完整的方式调用
+		Test tt = new Test();
+		tt.method2();
+		//使用省略的方式调用[无]
+		
+		//访问i
+		//完整的方式访问
+		System.out.println(tt.i);
+		//省略的方式访问
+	}
+	
+    //带有static的方法【构造方法】
+	public static void method1(){
+		//调用doSome方法
+		//完整的调用doSome方法
+		Test.doSome();
+		//省略方式的调用
+		doSome();
+		
+		//调用doTher方法
+		//完整的调用doTher方法
+		Test t = new Test();
+		t.doTher();
+		//省略方式的调用
+
+		//访问i
+		//完整的方式访问
+		System.out.println(t.i);
+		//省略的方式访问		
+	}
+	
+	//没有static的方法【实例方法】
+	public void method2(){
+		//调用doSome方法
+		//完整的调用doSome方法
+		Test.doSome();
+		//省略方式的调用
+		doSome();
+		
+		//调用doTher方法
+		//完整的调用doTher方法
+		this.doTher();
+		//省略方式的调用
+		doTher();
+		
+		//访问i
+		//完整的方式访问
+		System.out.println(this.i);
+		//省略的方式访问	
+		System.out.println(i);
+		
+	}
+	
+	//没有static的实例变量
+	int i = 10;
+	
+	//带有static的方法
+	public static void doSome(){
+		System.out.println("do some");
+	}
+	
+	//没有static的方法
+	public void doTher(){
+		System.out.println("do ther");
+		
+	}
+	
+	
+}
