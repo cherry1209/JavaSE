@@ -37,6 +37,6 @@ public class helloWorld{//表示定义了一个公开的类，起名helloworld
 	 //java语句以【“；”】终止
 	 //先记住：以下这样代码的作用是向控制台输出一段字符串
 		System.out.println("Hello World!");
-		System.out.println("我是你大爷");
+		System.out.println("Hello Windows!!");
 	}
 }
