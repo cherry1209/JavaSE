@@ -81,6 +81,7 @@ public class VarTest01
 		   System.out.println(i);
 		   
 		   //一行上可以声明多个变量
+		   //a和b没有初始化，不能访问
 		   int a,b,c = 100;
 		   System.out.println(c);
 	}
