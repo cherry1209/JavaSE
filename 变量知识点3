@@ -12,7 +12,7 @@
 public class VarTest03
 {
 	 //注意：这里的static不要去掉
-	 staatic int k = 60;
+	 static int k = 60;
 	 public static void main(String[] args)
 	 {
 	 	    //变量i的作用域是main方法
